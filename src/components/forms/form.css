@@ -1,0 +1,36 @@
+.blink {
+  padding-top: 30px;
+  color: green;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+  line-height: 28px;
+  font-size: 18px;
+  
+}
+.blink0 {
+        animation: blink1 .3s linear ;
+        animation-iteration-count: 7;
+      }
+      @keyframes blink1 {
+        0% {
+          opacity: 0;
+        }
+      }
+    
+input {
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: black;
+  border: none;
+  color: green;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+  line-height: 28px;
+  font-size: 1rem;
+  outline: none;
+}
+button {
+  font-size: 20px;
+  background-color : black;
+  border:none
+}
