@@ -10,6 +10,34 @@
   background-size: cover;
   position: relative;
 }
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  
+    animation: blink1 .3s linear ;
+    animation-iteration-count: 7;
+  
+  @keyframes blink1 {
+    0% {
+      opacity: 0;
+    }
+  }
+}
+.title .tit {
+  color: #ffffff;
+  font-size: 40px;
+  font-family: 'Source Code Pro', monospace;
+  line-height: 5rem;
+} 
+.tit1 {
+  color: #ffffff;
+  font-size: 25px;
+  font-family: 'Source Code Pro', monospace;
+  line-height: 3rem;
+  margin-top: 10px;
+}
 .box {
   width: 1600px;
   height: 950px;
@@ -38,6 +66,7 @@
   top:150%;
   left: 80%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 .blink {
   padding-top: 30px;
@@ -59,7 +88,6 @@
       }
     
 input {
-  width: 350px;
   margin-left: 20px;
   margin-right: 20px;
   background-color: rgba(0, 0, 0, 0);
@@ -79,4 +107,38 @@ input {
 }
 .formgroup {
   margin-top: 15px;
+}
+.ready {
+
+  height: 100px;
+  width: 200px;
+  color: green;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  border: green 5px solid;
+  border-radius: 15px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.dangki {
+
+  height: 100px;
+  width: 200px;
+  color: green;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  border: green 5px solid;
+  border-radius: 15px;
+  position: absolute;
+  top:50%;
+  left:90%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: transform .2s;
+}
+.dangki:hover {
+  transform: scale(1.5);
 }

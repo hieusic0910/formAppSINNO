@@ -29,6 +29,10 @@ function App() {
   let [truong12, setTruong12] = useState('none')
   let [truong13, setTruong13] = useState('none')
   let [submit, setSubmit] = useState('none')
+  let [form, setForm] = useState('none')
+  let [title, setTitle] = useState('none')
+  let [ready, setReady] = useState('block')
+  let [btndangki, setBtndangki] = useState('none')
   
   let handleFormSubmit = (e) => {
     e.preventDefault()
@@ -60,9 +64,32 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="box">
-          <div className="text">
+          <div className="text" >
+            <button className='ready' style={{display:ready}} onClick= {() => {
+              setReady('none')
+              setTimeout(() => {
+                setTitle('block')
+              },1000)
+              setTimeout(() => {
+                setBtndangki('block')
+              },7000)
+            }}>
+              Click to me
+            </button>
+            <div className="title" style={{display:title}}>
+              <div className="tit">Welcome to SINNO...</div>
+              <div className="tit1">Xin chào, chúng mình là SINNO - Câu lạc bộ Sáng tạo sinh viên trực thuộc Viện Công nghệ Thông tin và Truyền thông, Trường Đại học Bách Khoa Hà Nội. Với các giá trị cốt lõi nằm ở con người mang theo những đam mê và khát khao sáng tạo không giới hạn, tầm nhìn của chúng mình là trở thành một môi trường học tập năng động thoải mái, cung cấp hạ tầng dữ liệu mạnh mẽ và nhanh chóng cùng nền tảng IoT rộng lớn, để các sinh viên dễ dàng tìm đến nhau, kết nối ý tưởng và thỏa sức sáng tạo, để tự khai phá tài năng và lựa chọn con đường phát triển bản thân đúng đắn. SINNO mang trên mình sứ mệnh quan trọng là mang lại niềm đam mê về công nghệ và các giải pháp tin học cho lớp sinh viên trí thức, hứa hẹn vượt ngoài những giới hạn, định kiến hay những khô khan của một câu lạc bộ học thuật.</div>
+            </div>
+            <button className='dangki' style={{display:btndangki}} onClick= {() => {
+              setReady('none')
+              setTimeout(() => {
+                setTitle('none');
+                setBtndangki('none');
+                setForm('block')
+              },1000)
+            }}> Đăng kí nào </button>
           <form>
-              <div className="form">   
+              <div className="form" style={{display:form}}>   
                 <div>   
                     <div className="blink blink0" >1. Họ và tên bạn : 
                         <input type="text" onChange={(e) => {
@@ -115,7 +142,7 @@ function App() {
                     </div>    
                 </div>
                 <div>
-                    <div className="blink blink0" style={{display:truong6}}>6. Khoa : 
+                    <div className="blink blink0" style={{display:truong6}}>6. Ngành : 
                         <input type="text"  onChange={(e) => {
                           setKhoa(e.target.value);
                           setTimeout(() => {
